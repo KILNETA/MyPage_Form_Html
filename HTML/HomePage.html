@@ -17,7 +17,47 @@
     
         <T class="T">Title</T>
         <p>HELLO</p>
-        <div style="position:fixed; width: 80px; height: 80px; background-color:aqua;"></div>
+        <div style="position:fixed; bottom:25px;">
+            <a href="https://www.pixiv.net/" target="_blank"><img src="..\Picture\pixiv.jpg" style="border-radius:25px" width="50" height="50"></a>
+        </div>
+        <div style="position:fixed; bottom:75px;">
+            <a href="https://github.com/" target="_blank"><img src="..\Picture\github.png" style="border-radius:25px" width="50" height="50"></a>
+        </div>
+        <div style="position:fixed; bottom:125px;">
+            <a href="https://www.youtube.com/" target="_blank"><img src="..\Picture\youtube.png" style="border-radius:25px" width="50" height="50"></a>
+        </div>
 
+        
+        <div style="position:fixed; right:75px; bottom:100px; cursor: pointer;" class="js-back-to-top back-to-top" title="回到頭部">
+            <img src="..\Picture\arrow_up.jpg" style="border-radius:25px" width="50" height="50">
+        </div>
+        <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+
+        <script>
+        $(function(){
+            var $win = $(window);
+            var $backToTop = $('.js-back-to-top');
+            
+            if ($win.scrollTop() > 300)
+                $backToTop.show();
+            else
+                $backToTop.hide();
+            
+            // 當用戶滾動到離頂部100像素時，展示回到頂部按鈕
+            $win.scroll(function(){
+            
+            if ($win.scrollTop() > 300)
+                $backToTop.show();
+            else
+                $backToTop.hide();
+            });
+
+            // 當用戶點擊按鈕時，通過動畫效果返回頭部
+            $backToTop.click(function () {
+                $('html, body').animate({scrollTop: 0}, 200);  
+            });
+        });    
+        </script>
     </body>
 </html>
