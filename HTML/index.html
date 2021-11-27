@@ -10,17 +10,68 @@
         <!--網站簡述-->
         <meta name="description" content="my first web-pag">
         <!--宣告連結外部輔助檔案-->
-        <link rel="stylesheet" href="..\CSS\box.css"/>
+        <link rel="stylesheet" href="..\CSS\index_style.css"/>
     </head>
     <!--網站內容架構-->
-    <body style="height:2000px">
-    
+    <body>
+        <Box id="Head"></Box>
+        <Box id="Central_layout">
+            <Box class="PccuImgs">
+                <T class="Box_image_Titel">華岡測候站</T><BR/>
+                <img id="Weather" src="https://atmos.pccu.edu.tw/asWeb/awos.jpg" style="border-radius:5px"><BR/>
+            </Box>
+            
+            <Box class="PccuImgs">
+                <T class="Box_image_Titel">大仁球場</T><BR/>
+                <a href="http://140.137.99.92:8008/" target="_blank">
+                    <img class="cameraPccu" src="http://140.137.99.92:8008/" style="border-radius:5px">
+                </a>
+            </Box>
+
+            <Box class="PccuImgs">
+                <T class="Box_image_Titel">仇人波</T><BR/>
+                <a href="http://140.137.99.94:8008/" target="_blank">
+                    <img class="cameraPccu" src="http://140.137.99.94:8008/" style="border-radius:5px">
+                </a>
+            </Box>
+
+            <Box class="PccuImgs">
+                <T class="Box_image_Titel">曉峰紀念館</T><BR/>
+                <a href="http://140.137.99.91:8008/" target="_blank">
+                    <img class="cameraPccu" src="http://140.137.99.91:8008/" style="border-radius:5px">
+                </a>
+            </Box>
+        </Box>
+        <Box id="right_layout">
+            <T class="Box_image_Titel">公車資訊</T><BR/>
+            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10821" target="_blank">
+                <img class="bus" src="..\Picture\BTN_busR5.png" ></a></Box>
+            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10824" target="_blank">
+                <img class="bus" src="..\Picture\BTN_bus260s.png" ></a></Box>
+            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10823" target="_blank">
+                <img class="bus" src="..\Picture\BTN_bus260.png" ></a></Box>
+
+
+            <T class="Box_image_Titel">鄰近車站</T><BR/>
+            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=630" target="_blank">
+                <img class="bus" src="..\Picture\BTN_stationPCCU1.png" ></a></Box>
+            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=14422" target="_blank">
+                <img class="bus" src="..\Picture\BTN_stationPCCU.png" ></a></Box>
+            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=940" target="_blank">
+                <img class="bus" src="..\Picture\BTN_stationHuangsi.png" ></a></Box>
+        </Box>
+        <Box id="tail"></Box>
+
+
+
+
+<!--
         <T class="Titel_text">你好KILNETA web page</T>
 
         <div class="Central_layout">
             <div class="Box_image">
                 <T class="Box_image_Titel">華岡測候站</T><BR/>
-                <img src="https://atmos.pccu.edu.tw/asWeb/awos.jpg" style="border-radius:5px" width="75%" height="width*56%">
+                <img src="https://atmos.pccu.edu.tw/asWeb/awos.jpg" style="border-radius:5px" width="75%" height="width*56%"><BR/>
             </div><BR/>
             
             <div class="Box_image">
@@ -44,7 +95,7 @@
                 </a>
             </div><BR/>
         </div>
-
+-->
         <!--浮空按鈕選單-->
         <!--PCCU網站-->
         <div style="position:fixed; bottom:25px;">
@@ -53,37 +104,12 @@
             </a>
         </div>
 
-        
-        <div style="position:fixed; right:75px; bottom:100px; cursor: pointer;" class="js-back-to-top back-to-top" title="回到頭部">
+        <!--返回頁首功能按鈕-->
+        <div style="position:fixed; right:75px; bottom:100px; cursor: pointer;" class="js-back-to-top" title="回到頭部">
             <img src="..\Picture\arrow_up.jpg" style="border-radius:25px" width="50" height="50">
+            <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+            <script src="..\JavaScript\index.js"></script>
         </div>
-        <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
-
-
-        <script>
-        $(function(){
-            var $win = $(window);
-            var $backToTop = $('.js-back-to-top');
-            
-            if ($win.scrollTop() > 300)
-                $backToTop.show();
-            else
-                $backToTop.hide();
-            
-            // 當用戶滾動到離頂部100像素時，展示回到頂部按鈕
-            $win.scroll(function(){
-            
-            if ($win.scrollTop() > 300)
-                $backToTop.show();
-            else
-                $backToTop.hide();
-            });
-
-            // 當用戶點擊按鈕時，通過動畫效果返回頭部
-            $backToTop.click(function () {
-                $('html, body').animate({scrollTop: 0}, 200);  
-            });
-        });    
-        </script>
+        
     </body>
 </html>

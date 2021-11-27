@@ -1,0 +1,80 @@
+/*          Type          */
+img{
+    width:100%;
+}
+
+img#Weather{width:70%; height:height*56%; }
+img.cameraPccu{ width:95%; }
+img.bus{ width:90%; border-radius:15px ; }
+
+body{
+    height:2000px ; /*頁面高度*/
+}
+
+T{ /*字體*/
+    font-family:"微軟正黑體";
+}
+
+Box{ /*區塊*/
+    float: left;
+}
+
+Box.PccuImgs{
+    text-align:center;
+    width:50%;
+}
+Box.BusImgs{
+    text-align:center;
+    margin: 3% 0px 0px 0px;
+    width:100%;
+}
+
+Box#Head{
+    height: 200px; width: 100%;
+    background-color:rgb(214, 214, 214);/* 背景顏色 */
+}
+
+Box#Central_layout{
+    height:100%; width: 80%;
+    background-color:rgb(222, 243, 238);/* 背景顏色 */
+}
+
+Box#Right_layout{
+    height:100%; width: 20%;
+    background-color:rgb(248, 233, 233);/* 背景顏色 */
+}
+
+Box#Tail{
+    height: 200px; width: 100%;
+    background-color:rgb(148, 148, 148);/* 背景顏色 */
+}
+
+
+@media screen and (max-width: 800px) { 
+    Box#Right_layout ,Box#Central_layout {
+        width:100%; }
+    Box.imgs{
+        width:100%; }
+    Box.BusImgs{
+        width:33.33333333%; margin: 0.2% 0px 0px 0px;}
+    img.bus{ 
+        width:98%; border-radius:5px ;}
+}
+
+.Titel_text{ /*標題字體*/
+    background-color:rgb(222, 243, 238);/* 背景顏色 */
+    font-size:30px;/* 背景顏色 */
+    color:#8080C0;
+}
+
+T.Box_image_Titel{
+    font-weight:bold;
+    font-size:30px;
+    color: rgb(231, 80, 80);
+}
+T.Box_bus_Titel{
+    font-weight:bold;
+    font-size:30px;
+    color: rgb(231, 80, 80);
+}
+
