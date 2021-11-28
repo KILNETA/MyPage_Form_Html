@@ -14,52 +14,54 @@
     </head>
     <!--網站內容架構-->
     <body>
-        <Box id="Head"></Box>
+        <Box id="Head"></Box><BR/>
         <Box id="Central_layout">
-            <Box class="PccuImgs">
-                <T class="Box_image_Titel">華岡測候站</T><BR/>
-                <img id="Weather" src="https://atmos.pccu.edu.tw/asWeb/awos.jpg" style="border-radius:5px"><BR/>
-            </Box>
-            
-            <Box class="PccuImgs">
-                <T class="Box_image_Titel">大仁球場</T><BR/>
-                <a href="http://140.137.99.92:8008/" target="_blank">
-                    <img class="cameraPccu" src="http://140.137.99.92:8008/" style="border-radius:5px">
-                </a>
-            </Box>
+            <Box id="Main_layout">
+                <Box class="PccuImgs">
+                    <T class="Box_image_Titel">華岡測候站</T><BR/>
+                    <img id="Weather" src="https://atmos.pccu.edu.tw/asWeb/awos.jpg" style="border-radius:5px" title="文大即時天氣"><BR/>
+                </Box>
+                
+                <Box class="PccuImgs">
+                    <T class="Box_image_Titel">大仁球場</T><BR/>
+                    <a href="http://140.137.99.92:8008/" target="_blank">
+                        <img class="cameraPccu" src="http://140.137.99.92:8008/" style="border-radius:5px" title="大仁球場即時影像">
+                    </a>
+                </Box>
 
-            <Box class="PccuImgs">
-                <T class="Box_image_Titel">仇人波</T><BR/>
-                <a href="http://140.137.99.94:8008/" target="_blank">
-                    <img class="cameraPccu" src="http://140.137.99.94:8008/" style="border-radius:5px">
-                </a>
+                <Box class="PccuImgs">
+                    <T class="Box_image_Titel">仇人波</T><BR/>
+                    <a href="http://140.137.99.94:8008/" target="_blank">
+                        <img class="cameraPccu" src="http://140.137.99.94:8008/" style="border-radius:5px" title="仇人波即時影像">
+                    </a>
+                </Box>
+
+                <Box class="PccuImgs">
+                    <T class="Box_image_Titel">曉峰紀念館</T><BR/>
+                    <a href="http://140.137.99.91:8008/" target="_blank">
+                        <img class="cameraPccu" src="http://140.137.99.91:8008/" style="border-radius:5px" title="曉峰紀念館即時影像">
+                    </a>
+                </Box>
             </Box>
+            <Box id="right_layout">
+                <T class="Box_bus_Titel">公車資訊</T><BR/>
+                <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10821" target="_blank">
+                    <img class="bus" src="..\Picture\BTN_busR5.png" title="紅5 劍潭捷運站-陽明山"></a></Box>
+                <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10824" target="_blank">
+                    <img class="bus" src="..\Picture\BTN_bus260s.png" title="260區 陽明山-臺北車站"></a></Box>
+                <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10823" target="_blank">
+                    <img class="bus" src="..\Picture\BTN_bus260.png" title="260 陽明山-東園"></a></Box>
 
-            <Box class="PccuImgs">
-                <T class="Box_image_Titel">曉峰紀念館</T><BR/>
-                <a href="http://140.137.99.91:8008/" target="_blank">
-                    <img class="cameraPccu" src="http://140.137.99.91:8008/" style="border-radius:5px">
-                </a>
+
+                <T class="Box_bus_Titel">鄰近車站</T><BR/>
+                <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=630" target="_blank">
+                    <img class="bus" src="..\Picture\BTN_stationPCCU1.png" title="文化大學1站"></a></Box>
+                <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=14422" target="_blank">
+                    <img class="bus" src="..\Picture\BTN_stationPCCU.png" title="文化大學站"></a></Box>
+                <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=940" target="_blank">
+                    <img class="bus" src="..\Picture\BTN_stationHuangsi.png" title="磺溪底站"></a></Box>
             </Box>
-        </Box>
-        <Box id="right_layout">
-            <T class="Box_image_Titel">公車資訊</T><BR/>
-            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10821" target="_blank">
-                <img class="bus" src="..\Picture\BTN_busR5.png" ></a></Box>
-            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10824" target="_blank">
-                <img class="bus" src="..\Picture\BTN_bus260s.png" ></a></Box>
-            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10823" target="_blank">
-                <img class="bus" src="..\Picture\BTN_bus260.png" ></a></Box>
-
-
-            <T class="Box_image_Titel">鄰近車站</T><BR/>
-            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=630" target="_blank">
-                <img class="bus" src="..\Picture\BTN_stationPCCU1.png" ></a></Box>
-            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=14422" target="_blank">
-                <img class="bus" src="..\Picture\BTN_stationPCCU.png" ></a></Box>
-            <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=940" target="_blank">
-                <img class="bus" src="..\Picture\BTN_stationHuangsi.png" ></a></Box>
-        </Box>
+        </Box><BR/>
         <Box id="tail"></Box>
         
         <!--浮空按鈕選單-->
@@ -76,6 +78,5 @@
             <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
             <script src="..\JavaScript\index.js"></script>
         </div>
-        
     </body>
 </html>

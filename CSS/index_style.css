@@ -8,7 +8,7 @@ img.cameraPccu{ width:95%; }
 img.bus{ width:90%; border-radius:15px ; }
 
 body{
-    height:2000px ; /*頁面高度*/
+    height:100%; /*頁面高度*/
 }
 
 T{ /*字體*/
@@ -35,12 +35,23 @@ Box#Head{
 }
 
 Box#Central_layout{
-    height:100%; width: 80%;
+    position: relative;
+    padding-bottom: 0px;
+    width: 100%;
+}
+
+Box#Main_layout{
+    padding-bottom: 10px;
+    width: 80%;
     background-color:rgb(222, 243, 238);/* 背景顏色 */
 }
 
 Box#Right_layout{
-    height:100%; width: 20%;
+    position:absolute;
+	top: 0px;
+	bottom: 0px;
+    padding: 10px 0px;
+    width: 20%;
     background-color:rgb(248, 233, 233);/* 背景顏色 */
 }
 
@@ -51,14 +62,16 @@ Box#Tail{
 
 
 @media screen and (max-width: 800px) { 
-    Box#Right_layout ,Box#Central_layout {
-        width:100%; }
+    body{
+        width:800px;}
+    Box#Right_layout ,Box#Main_layout {
+        width:100%; position:relative; }
     Box.imgs{
         width:100%; }
     Box.BusImgs{
-        width:33.33333333%; margin: 0.2% 0px 0px 0px;}
+        width:calc(100%/3); margin: 0.2% 0px 0px 0px;}
     img.bus{ 
-        width:98%; border-radius:5px ;}
+        width:95%; border-radius:5px ;}
 }
 
 .Titel_text{ /*標題字體*/
@@ -73,6 +86,7 @@ T.Box_image_Titel{
     color: rgb(231, 80, 80);
 }
 T.Box_bus_Titel{
+    margin-left: 20px;
     font-weight:bold;
     font-size:30px;
     color: rgb(231, 80, 80);
