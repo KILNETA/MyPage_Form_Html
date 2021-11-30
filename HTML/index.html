@@ -1,50 +1,77 @@
 <html>
-    <!--網站架構資訊-->
-    <head>
-        <!--指定網頁所使用的編碼用來指定網頁內容是用什麼編碼 (character set)，現在大多數的網頁編碼都是 UTF-8。-->
-        <meta charset="utf-8">
-        <!--網頁標題-->
-        <title>hello Man</title>
-        <!--網頁關鍵字(keywords)-->
-        <meta name="keywords" content="KILNETA,HTML">
-        <!--網站簡述-->
-        <meta name="description" content="my first web-pag">
-        <!--宣告連結外部輔助檔案-->
-        <link rel="stylesheet" href="..\CSS\index_style.css"/>
-    </head>
-    <!--網站內容架構-->
-    <body>
-        <Box id="Head"></Box><BR/>
-        <Box id="Central_layout">
-            <Box id="Main_layout">
-                <Box class="PccuImgs">
-                    <T class="Box_image_Titel">華岡測候站</T><BR/>
-                    <img id="Weather" src="https://atmos.pccu.edu.tw/asWeb/awos.jpg" style="border-radius:5px" title="文大即時天氣"><BR/>
-                </Box>
-                
-                <Box class="PccuImgs">
+<!--網站架構資訊-->
+<head>
+    <!--指定網頁所使用的編碼用來指定網頁內容是用什麼編碼 (character set)，現在大多數的網頁編碼都是 UTF-8。-->
+    <meta charset="utf-8">
+    <!--網頁標題-->
+    <title>文化大學資訊網</title>
+    <!--網頁關鍵字(keywords)-->
+    <meta name="keywords" content="PCCU,文化大學">
+    <!--網站簡述-->
+    <meta name="description" content="文化大學資訊網 非校方網站">
+    <!--宣告連結外部輔助檔案-->
+    <link rel="stylesheet" href="..\CSS\index_style.css"/>
+</head>
+<!--網站內容架構-->
+<body>
+<div id="Board_Head">
+    <div class="Head_MainBox">
+        <a href="https://www.pccu.edu.tw/" target="_blank"><img id="PccuLogo" src="https://www.pccu.edu.tw/img/CCUlogo.png" title="文化大學"></a>
+        <T id="Titel">文化大學資訊網</T>
+    </div>
+</div>
+<div id="Board_List">
+    <div class="List_MainBox">
+        <a class="ListButton" href="https://www.pccu.edu.tw/" target="_blank">文大校網</a>
+        <a class="ListButton" href="https://mycourse.pccu.edu.tw/" target="_blank">選　課</a>
+        <a class="ListButton" href="https://icas.pccu.edu.tw/" target="_blank">課輔系統</a>
+        <a class="ListButton" href="https://ecampus.pccu.edu.tw/ecampus/default.aspx?usertype=student" target="_blank">學生專區</a>
+    </div>
+</div>
+<div id="Board_Body">
+    <div class="Body_MainBox">
+        <div id="MainBoard">
+            <div class="Board" style="height: 600px;">
+                <div id="PccuWeather">
+                <T class="Box_image_Titel">華岡測候站</T><BR/>
+                <img id="Weather" src="https://atmos.pccu.edu.tw/asWeb/awos.jpg" style="border-radius:5px" title="文大即時天氣"><BR/></div>
+
+                <div id="PccuCalendar">
+                    <T class="Box_image_Titel">文大行事曆</T><BR/>
+                    <iframe src="https://calendar.google.com/calendar/embed?height=525&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTaipei&showTitle=0&showTz=0&showCalendars=0&showTabs=0&showPrint=0&src=pccu.edu.tw_blcke48f8jv7rd96hs8oeb06ro%40group.calendar.google.com&color=%23039BE5&color=%2333B679&color=%23F09300&color=%230B8043&color=%230B8043" frameborder="0" scrolling="no"></iframe></div>
+                </div>
+            <div class="Board" style="height: 600px;">
+                <div class="PccuCamera">
                     <T class="Box_image_Titel">大仁球場</T><BR/>
                     <a href="http://140.137.99.92:8008/" target="_blank">
                         <img class="cameraPccu" src="http://140.137.99.92:8008/" style="border-radius:5px" title="大仁球場即時影像">
                     </a>
-                </Box>
+                </div>
 
-                <Box class="PccuImgs">
+                <div class="PccuCamera">
                     <T class="Box_image_Titel">仇人波</T><BR/>
                     <a href="http://140.137.99.94:8008/" target="_blank">
                         <img class="cameraPccu" src="http://140.137.99.94:8008/" style="border-radius:5px" title="仇人波即時影像">
                     </a>
-                </Box>
+                </div>
 
-                <Box class="PccuImgs">
+                <div class="PccuCamera">
                     <T class="Box_image_Titel">曉峰紀念館</T><BR/>
                     <a href="http://140.137.99.91:8008/" target="_blank">
                         <img class="cameraPccu" src="http://140.137.99.91:8008/" style="border-radius:5px" title="曉峰紀念館即時影像">
                     </a>
-                </Box>
-            </Box>
-            <Box id="right_layout">
-                <T class="Box_bus_Titel">公車資訊</T><BR/>
+                </div>
+
+                <div class="PccuCamera">
+                    <T class="Box_image_Titel">計程車停車場</T><BR/>
+                    <a href="http://140.137.99.95:8008/" target="_blank">
+                        <img class="cameraPccu" src="http://140.137.99.95:8008/" style="border-radius:5px" title="計程車停車場即時影像">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="RightBoard">
+            <T class="Box_bus_Titel">公車資訊</T><BR/>
                 <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10821" target="_blank">
                     <img class="bus" src="..\Picture\BTN_busR5.png" title="紅5 劍潭捷運站-陽明山"></a></Box>
                 <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/route.jsp?rid=10824" target="_blank">
@@ -60,23 +87,25 @@
                     <img class="bus" src="..\Picture\BTN_stationPCCU.png" title="文化大學站"></a></Box>
                 <Box class="BusImgs"><a href="https://pda.5284.gov.taipei/MQS/stoplocation.jsp?slid=940" target="_blank">
                     <img class="bus" src="..\Picture\BTN_stationHuangsi.png" title="磺溪底站"></a></Box>
-            </Box>
-        </Box><BR/>
-        <Box id="tail"></Box>
-        
-        <!--浮空按鈕選單-->
-        <!--PCCU網站-->
-        <div style="position:fixed; bottom:25px;">
-            <a href="https://www.pccu.edu.tw/" target="_blank">
-                <img src="..\Picture\pccu.png" style="border-radius:25px" width="100" height="100">
-            </a>
         </div>
+    </div>
+</div>
+<div id="Board_End">
+    <div class="End_MainBox">
+        <T id="Text">
+            聯絡資訊<br/>
+            學校地址：臺北市11114陽明山華岡路55號<br/>
+            55, Hwa-Kang Rd., Yang-Ming-Shan, Taipei ,<br/>
+            Taiwan 11114, R. O. C.<br/>
+            <br/>
+            聯絡電話：(02)2861-0511、(02)2861-1801<br/>
+            <br/>
+            緊急聯絡<br/>
+            軍訓教官值班室： (02)28616630 、 0986716630<br/>
+            警衛隊：(02)28610511#11911<br/>
+        </T>
+    </div>
+</div>
 
-        <!--返回頁首功能按鈕-->
-        <div style="position:fixed; right:75px; bottom:100px; cursor: pointer;" class="js-back-to-top" title="回到頭部">
-            <img src="..\Picture\arrow_up.jpg" style="border-radius:25px" width="50" height="50">
-            <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
-            <script src="..\JavaScript\index.js"></script>
-        </div>
-    </body>
+</body>
 </html>

@@ -1,94 +1,195 @@
-/*          Type          */
-img{
-    width:100%;
-}
-
-img#Weather{width:70%; height:height*56%; }
-img.cameraPccu{ width:95%; }
-img.bus{ width:90%; border-radius:15px ; }
-
+/*預設Type*/
 body{
-    height:100%; /*頁面高度*/
+    margin: 0px;
+    height: 100%;
+}
+T{  font-family:"微軟正黑體";}
+
+
+
+/*-------------------------頁首區塊-------------------------*/
+
+#Board_Head{
+	display: block;
+
+    height: 90px; width: 100%;
+    background-color:rgb(192, 192, 192);/* 背景顏色 */
+}
+.Head_MainBox{ 
+    display: block;
+    margin: 0px auto;
+
+    height: 90px;
+    width: 1200px;
 }
 
-T{ /*字體*/
-    font-family:"微軟正黑體";
-}
-
-Box{ /*區塊*/
+/*______________________ 內容區塊 ______________________*/
+img#PccuLogo{ /*--- ↓ 文大LOGO區塊 ↓ ---*/
+    padding-top:20px;
     float: left;
+    height: 70px;
 }
+.Head_MainBox T#Titel{ /*--- ↓ 網站名稱區塊 ↓ ---*/
+    padding: 10px 30px 0px 30px;
+    float: left;
+    font-size:60px;
+    color: rgb(255, 231, 188);
+}
+/*-------------------------頁首主選單-------------------------*/
+#Board_List{
+	display: block;
 
-Box.PccuImgs{
+    height: 50px; width: 100%;
+    background-color:rgb(235, 235, 235);/* 背景顏色 */
+}
+.List_MainBox{ 
+    display: block;
+    margin: 0px auto;
+
+    height: 50px;
+    width: 1200px;
+}
+/*______________________ 主選單區塊 ______________________*/
+
+a.ListButton{
+    float: right;
+    margin:0px 5px 0px 0px;
+    padding: 9px 15px;
+    height: 32px; width: 96px;
+
+    font-family:"微軟正黑體";
     text-align:center;
-    width:50%;
+    font-weight:bold;
+    font-size:24px;
+
+    text-decoration:none;
+    background-color: rgb(240, 151, 93);
+    color:#ffffff;
 }
-Box.BusImgs{
-    text-align:center;
-    margin: 3% 0px 0px 0px;
-    width:100%;
+a.ListButton:hover {/*設定滑鼠移經的連結*/
+    background-color: rgb(243, 180, 138);
+}
+a.ListButton:active {/*設定正在點選的連結*/ 
+    background-color:rgb(199, 199, 199);
 }
 
-Box#Head{
-    height: 200px; width: 100%;
-    background-color:rgb(214, 214, 214);/* 背景顏色 */
+
+
+
+/*-------------------------頁主區塊-------------------------*/
+
+#Board_Body{
+    display: block;
+    font-size:18px;
+    height: 1300px; width: 100%;
+}
+.Body_MainBox{ 
+    display: block;
+    margin: 0px auto;
+
+    height: 100%;
+    width: 1200px;
+}
+.Body_MainBox #MainBoard{
+    float: left;
+
+    height: 100%;
+    width: 950px;
+    background-color:rgb(224, 255, 250);/* 背景顏色 */
 }
 
-Box#Central_layout{
-    position: relative;
-    padding-bottom: 0px;
+
+/*______________________ MainBoard內容區塊 ______________________*/
+.Body_MainBox #MainBoard .Board{    /*分割小區塊格*/
+    display: block;
     width: 100%;
 }
 
-Box#Main_layout{
-    padding-bottom: 10px;
-    width: 80%;
-    background-color:rgb(222, 243, 238);/* 背景顏色 */
-}
+img#Weather{width:95%;}             /*當前天氣圖*/
+img.cameraPccu{ width:95%; }        /*Pccu攝像頭*/
 
-Box#Right_layout{
-    position:absolute;
-	top: 0px;
-	bottom: 0px;
-    padding: 10px 0px;
-    width: 20%;
-    background-color:rgb(248, 233, 233);/* 背景顏色 */
-}
-
-Box#Tail{
-    height: 200px; width: 100%;
-    background-color:rgb(148, 148, 148);/* 背景顏色 */
-}
-
-
-@media screen and (max-width: 800px) { 
-    body{
-        width:800px;}
-    Box#Right_layout ,Box#Main_layout {
-        width:100%; position:relative; }
-    Box.imgs{
-        width:100%; }
-    Box.BusImgs{
-        width:calc(100%/3); margin: 0.2% 0px 0px 0px;}
-    img.bus{ 
-        width:95%; border-radius:5px ;}
-}
-
-.Titel_text{ /*標題字體*/
-    background-color:rgb(222, 243, 238);/* 背景顏色 */
-    font-size:30px;/* 背景顏色 */
-    color:#8080C0;
-}
-
-T.Box_image_Titel{
+T.Box_image_Titel{                  /*影像區塊-標題*/
     font-weight:bold;
     font-size:30px;
     color: rgb(231, 80, 80);
 }
+#PccuWeather{                          /*圖像區塊*/
+    display: block;
+
+    float: left;
+    text-align:center;
+    height: 100%; width:50%;
+}
+#PccuCalendar{                      /*行事曆區塊*/
+    display: block;
+    margin: auto 0px;
+
+    float: left;
+    text-align:center;
+    width:50%;
+    height: 100%;
+}
+#PccuCalendar iframe{               /*在行事曆區塊中-匯入之物件*/
+    width: 100%;
+    height: 525px;
+}
+.PccuCamera{                          /*Pccu攝像頭區塊*/
+    display: block;
+
+    float: left;
+    text-align:center;
+    width:50%;
+}
+
+/*______________________ MainBoard內容區塊 ______________________*/
+
+
+.Body_MainBox #RightBoard{
+    float: right;
+
+    height: 100%;
+    width: 250px;
+    background-color:rgb(225, 255, 224);/* 背景顏色 */
+}
+/*______________________ RightBoard內容區塊 ______________________*/
+img.bus{ width:100%; }
 T.Box_bus_Titel{
     margin-left: 20px;
     font-weight:bold;
     font-size:30px;
     color: rgb(231, 80, 80);
 }
+.BusImgs{
+    text-align:center;
+    margin: 3% 0px 0px 0px;
+    width:100%;
+}
 
+
+/*______________________ RightBoard內容區塊 ______________________*/
+
+
+
+/*-------------------------頁尾區塊-------------------------*/
+
+#Board_End{
+    display: block;
+
+    height: 340px; width: 100%;
+    background-color:rgb(74, 74, 82);/* 背景顏色 */
+}
+#Board_End .End_MainBox{ 
+    display: block;
+    margin: 0px auto;
+
+    width: 1200px;
+}
+/*______________________ 內容區塊 ______________________*/
+.End_MainBox T#Text{ /*--- ↓ 網站名稱區塊 ↓ ---*/
+    display: block;
+    padding: 20px;
+
+    height: 300px;
+    font-size:18px;
+    color: rgb(255, 231, 188);
+}
